@@ -792,22 +792,3 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$settings['flysystem']['s3'] = array (
-  'driver' => 's3',
-  'config' => [
-  	'key'    => getenv('S3_ACCCESS_KEY'), 
-  	'secret' => getenv('S3_SECRET_KEY'),
-  	'region' => getenv('S3_REGION') ?? 'us-east-1',
-  	'bucket' => getenv('S3_BUCKET'),
-  	'endpoint' => getenv('S3_ENDPOINT'),
-  	'protocol' => getenv('S3_PROTO') ?? "http",
-  	'cname_is_bucket' => getenv('S3_CNAME_IS_BUCKET') ?? FALSE,
-  	"cname" => getenv('S3_CNAME'),
-  	'use_path_style_endpoint' => getenv('S3_USE_PATH_STYLE_ENDPOINT') ?? TRUE, 
-  	'public' => getenv('S3_PUBLIC'),
-	  'prefix' => getenv('S3_PREFIX'),
-   ],
-   'cache' => TRUE, 
-   'serve_js' => TRUE,
-   'serve_css' => TRUE,
-);
